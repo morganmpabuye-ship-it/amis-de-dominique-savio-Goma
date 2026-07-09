@@ -1,0 +1,311 @@
+:root {
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #4b5563;
+    --accent: #3953a4;
+    --accent-soft: rgba(57, 83, 164, 0.12);
+    --border: #d1d5db;
+    --radius: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.75;
+    background: linear-gradient(180deg, #eef4fb 0%, #f9fbff 100%);
+}
+
+body > * {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+.page-shell {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    background: linear-gradient(180deg, rgba(57, 83, 164, 0.14), rgba(255, 255, 255, 0.9));
+    border: 1px solid rgba(57, 83, 164, 0.12);
+    border-radius: 32px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+}
+
+.hero p {
+    margin: 0;
+    color: #334155;
+}
+
+.section-surface {
+    background: var(--surface);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 28px;
+    padding: 2rem;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.05);
+}
+
+.section-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section-grid.two-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 24px ;
+    padding: 1.5rem;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+}
+
+.card img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1.5rem 0 1rem;
+    line-height: 1.1;
+    color: #102147;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    color: #344054;
+}
+
+p.intro {
+    color: #1f2937;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+strong {
+    color: #111827;
+}
+
+em {
+    color: #25324d;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+    color: #2b4b8f;
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    margin: 0 0 1.5rem 1.5rem;
+    color: #475569;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.4rem;
+    border-left: 4px solid var(--accent);
+    background: rgba(57, 83, 164, 0.08);
+    color: #334155;
+}
+
+@media (max-width: 900px) {
+    body > * {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    .section-grid.two-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        gap: 1.8rem;
+    }
+
+    .hero {
+        padding: 1.8rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+}
+                .mon-bouton {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                }
+                /* ==========================================================================
+   Styles spécifiques pour la page Contact finale
+   ========================================================================== */
+
+/* Liste des réunions */
+.meetings-list {
+    list-style: none;
+    max-width: 750px;
+    margin: 20px auto 0 auto;
+}
+
+.meetings-list li {
+    background-color: #f8fafc;
+    border-left: 4px solid #d4af37; /* Ligne dorée sur le côté */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.meeting-place {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #1a365d;
+    font-size: 1.05rem;
+    margin-bottom: 3px;
+}
+
+.meeting-details {
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.info-intro, .contact-notice {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+/* Grille des numéros de téléphone */
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+.phone-card {
+    background-color: #f7f9fc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.phone-label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #718096;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.phone-link {
+    color: #1a365d;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.phone-link:hover {
+    color: #d4af37;
+}
+
+/* Zone E-mail */
+.email-zone {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.email-label {
+    font-weight: 600;
+    color: #1a365d;
+}
+
+.email-link {
+    color: #2b6cb0;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.email-link:hover {
+    color: #1a365d;
+}
